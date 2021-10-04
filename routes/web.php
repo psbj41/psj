@@ -22,3 +22,4 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::put('/', "Backend\ContactController@store2")->name('contact.store2');

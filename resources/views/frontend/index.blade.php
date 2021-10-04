@@ -177,6 +177,9 @@
                     <div class="pageCointainer">
                         <section class="comonSection aboutSection">
                             <div class="container-fluid">
+                                @if (session('success'))
+                                    <h4>Message Sent</h4>
+                                @endif
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h2 class="sectionTitle">About Info</h2>
@@ -203,7 +206,7 @@
                                                 <div class="icon_box_01">
                                                     <i class="icon icon-Mail"></i>
                                                     <h3>Email Address</h3>
-                                                    <p>psj334061236@gmail.com</p>
+                                                    <p>psbj41@gmail.com</p>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
@@ -612,7 +615,7 @@
                                                     data-parent="#edication_accordion">
                                                     <div class="card-body">
                                                         <div class="ac_meta"><span>Year: 2018</span><span>Percentage:
-                                                            70.77</span></div>
+                                                                70.77</span></div>
                                                         College Name: D. D. Bytco HighSchool and Junior College, CBS,
                                                         Nashik. Nashik Board, HSC
                                                     </div>
@@ -721,9 +724,12 @@
                                                 <div id="ex_col_01" class="collapse show" aria-labelledby="ex_01"
                                                     data-parent="#exps_accordion">
                                                     <div class="card-body">
-                                                        <div class="ac_meta"><span>July 2021 - Continue</span><span>Chair</span></div>
-                                                        Currently Working as Chair in Sandip Foundation's IEEE Student Branch.
-                                                        Being Chair my responsibilties are manage events, keep records of SB,
+                                                        <div class="ac_meta"><span>July 2021 -
+                                                                Continue</span><span>Chair</span></div>
+                                                        Currently Working as Chair in Sandip Foundation's IEEE Student
+                                                        Branch.
+                                                        Being Chair my responsibilties are manage events, keep records
+                                                        of SB,
                                                         explore the technology with members.
                                                     </div>
                                                 </div>
@@ -742,10 +748,14 @@
                                                 <div id="ex_col_02" class="collapse" aria-labelledby="ex_02"
                                                     data-parent="#exps_accordion">
                                                     <div class="card-body">
-                                                        <div class="ac_meta"><span>Mar 2021 - Continue</span><span>Web Master</span></div>
-                                                        As Web Master my responsibilites are to manage chapters website and
-                                                        technical works. I made complete website for this chapter in new form
-                                                        in wordpress with good features. <a href="https://ieeebombay.org/sight" target="_blank">Link</a>
+                                                        <div class="ac_meta"><span>Mar 2021 - Continue</span><span>Web
+                                                                Master</span></div>
+                                                        As Web Master my responsibilites are to manage chapters website
+                                                        and
+                                                        technical works. I made complete website for this chapter in new
+                                                        form
+                                                        in wordpress with good features. <a
+                                                            href="https://ieeebombay.org/sight" target="_blank">Link</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -765,8 +775,10 @@
                                                     <div class="card-body">
                                                         <div class="ac_meta"><span>Jul 2021 - Aug 2021</span><span>Web
                                                                 Developer</span></div>
-                                                        I made complete website for this company. I used the Laravel Framework.
-                                                        Used separates UI for frontend and Backend and complete databse oriented
+                                                        I made complete website for this company. I used the Laravel
+                                                        Framework.
+                                                        Used separates UI for frontend and Backend and complete databse
+                                                        oriented
                                                         website. All contents are being fetched from database.
                                                     </div>
                                                 </div>
@@ -787,9 +799,8 @@
                                                     <div class="card-body">
                                                         <div class="ac_meta"><span>June 2021 - Continue</span><span>Web
                                                                 Developer</span></div>
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                                        non cupidatat skateboard dolor brunch.
+                                                        I made research data collection website for this institute.
+                                                        https://research.spit.ac.in
                                                     </div>
                                                 </div>
                                             </div>
@@ -1105,9 +1116,6 @@
                 </div>
                 <div class="bodyContent" id="contact">
                     <div class="pageCointainer">
-                        <section class="comonSection mapSection mb30">
-                            <div class="map" id="map"></div>
-                        </section>
                         <section class="comonSection contactSection">
                             <div class="container-fluid">
                                 <div class="row">
@@ -1118,10 +1126,11 @@
                                 <div class="row mb30">
                                     <div class="col-lg-8">
                                         <div class="contact_form">
-                                            <form method="post" action="#" id="contactForm">
+                                            <form method="post" action="{{ route('contact.store2') }}" id="contactForm">
+                                                @csrf
                                                 <div class="row">
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="required" name="full_name"
+                                                        <input type="text" class="required" name="name"
                                                             placeholder="Full Name *" />
                                                     </div>
                                                     <div class="col-lg-6">
@@ -1129,10 +1138,10 @@
                                                             placeholder="Email *" />
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <input type="text" name="phone" placeholder="Phone" />
+                                                        <input type="text" name="number" placeholder="Phone" />
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <input type="text" class="required" name="sjubject"
+                                                        <input type="text" class="required" name="subject"
                                                             placeholder="Subject *" />
                                                     </div>
                                                     <div class="col-lg-12">
@@ -1152,20 +1161,19 @@
                                         <div class="icon_box_01">
                                             <i class="icon icon-Mail"></i>
                                             <h3>Email Address</h3>
-                                            <p>k.melissa@caroll.me</p>
+                                            <p>psbj41@gmail.com</p>
                                         </div>
                                         <div class="icon_box_01">
                                             <i class="icon icon-Phone"></i>
                                             <h3>Phone Number</h3>
-                                            <p>1.800.987.6987</p>
+                                            <p>+91 7218358829</p>
                                         </div>
                                         <div class="icon_box_01 addrBox">
                                             <i class="icon icon-Pointer"></i>
                                             <h3>Address</h3>
                                             <p>
-                                                189 Lodge Avenue,
-                                                Dagenham, RM8 2HQ,
-                                                United Kingdom
+                                                Nashik, Maharashtra
+                                                India
                                             </p>
                                         </div>
                                     </div>
@@ -1187,11 +1195,31 @@
                 </div>
                 <div class="bodyContent" id="login">
                     <div class="pageCointainer">
+                        @if (Route::has('login'))
+                        @auth
                         <section class="comonSection contactSection">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h2 class="sectionTitle">Contact Me</h2>
+                                        <h2 class="sectionTitle">Backend Home Page</h2>
+                                    </div>
+                                </div>
+                                <div class="row mb30">
+                                    <div class="col-lg-12">
+                                        <div class="contact_form">
+                                            <a href="{{route('home')}}">Home</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        @else
+
+                        <section class="comonSection contactSection">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2 class="sectionTitle">Login Page</h2>
                                     </div>
                                 </div>
                                 <div class="row mb30">
@@ -1231,6 +1259,9 @@
                                 </div>
                             </div>
                         </section>
+                        @endauth
+                        @endif
+
                         <footer class="footer">
                             <div class="container-fluid">
                                 <div class="row">
