@@ -18,8 +18,10 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::put('/', "Backend\ContactController@store2")->name('contact.store2');
+
+Route::resource('cert', 'Backend\CertController');

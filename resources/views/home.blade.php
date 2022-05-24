@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <div>
+                        <a href="{{route('cert.index')}}">Certificate Section</a>
+                    </div>
                 </div>
             </div>
         </div>
